@@ -1,0 +1,139 @@
+<!-- grid 레이아웃 반응형 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout03</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #E1F5FE;
+    }
+
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    #main {
+      display: grid;
+      grid-template-areas:
+        "asid article1 article1"
+        "asid article2 article2"
+        "asid article3 article3"
+      ;
+      grid-template-columns: 30% 35% 35%;
+      grid-template-rows: 260px 260px 260px;
+    }
+
+    #header {
+      width: 100%;
+      height: 100px;
+      background-color: #B3E5FC;
+    }
+
+    #nav {
+      width: 100%;
+      height: 100px;
+      background-color: #81D4FA;
+    }
+
+    #aside {
+      background-color: #4FC3F7;
+      grid-area: asid;
+    }
+
+    #article1 {
+      background-color: #29B6F6;
+      grid-area: article1;
+    }
+
+    #article2 {
+      background-color: #03A9F4;
+      grid-area: article2;
+
+    }
+
+    #article3 {
+      background-color: #039BE5;
+      grid-area: article3;
+    }
+
+    #footer {
+      width: 100%;
+      height: 100px;
+      background-color: #0288D1;
+    }
+
+
+    @media (max-width: 1280px) {
+      #wrap {
+        width: 96%;
+      }
+
+      #main {
+        grid-template-areas:
+          "asid article1 article1"
+          "asid article2 article3"
+          "asid article2 article3"
+        ;
+        grid-template-columns: 30% 35% 35%;
+        grid-template-rows: 260px 260px 260px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #wrap {
+        width: 100%;
+      }
+
+      #main {
+        grid-template-areas:
+          "asid article1"
+          "asid article2"
+        ;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 390px 390px;
+      }
+
+      #article3 {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #main {
+        grid-template-areas:
+          "asid"
+          "article1"
+          "article2"
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 430px 150px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header">header</div>
+    <div id="nav">nav</div>
+    <div id="main">
+      <div id="aside">aside</div>
+      <div id="article1">article1</div>
+      <div id="article2">article2</div>
+      <div id="article3">article3</div>
+    </div>
+    <div id="footer">footer</div>
+  </div>
+</body>
+
+</html>
