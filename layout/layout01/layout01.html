@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout01</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #FFF3E0;
+    }
+
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+      background-color: #FFE0B2;
+    }
+
+    #header {
+      width: 100%;
+      height: 100px;
+
+    }
+
+    #nav {
+      width: 100%;
+      height: 100px;
+      background-color: #FFCC80;
+    }
+
+    #main {
+      display: grid;
+      grid-template-areas:
+        "aside section"
+      ;
+      grid-template-columns: 30% 70%;
+      grid-template-rows: 780px;
+    }
+
+    #aside {
+      grid-area: aside;
+      background-color: #FFB74D;
+    }
+
+    #section {
+      grid-area: section;
+      background-color: #FFA726;
+    }
+
+    #footer {
+      width: 100%;
+      height: 100px;
+      background-color: #FF9800;
+    }
+
+    @media (max-width: 1300px) {
+      #wrap {
+        width: 96%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #wrap {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #main {
+        grid-template-areas:
+          "aside"
+          "section"
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: 300px 480px;
+      }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header">header</div>
+    <div id="nav">nav</div>
+    <div id="main">
+      <div id="aside">aside</div>
+      <div id="section">section</div>
+    </div>
+    <div id="footer">footer</div>
+  </div>
+</body>
+
+</html>
