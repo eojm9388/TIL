@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>header</title>
+  <style>
+    /* font */
+    @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+    .nexon {
+      font-family: 'NexonLv1Gothic';
+      font-weight: 400;
+    }
+
+    /* reset */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    em {
+      font-style: normal;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    /* header */
+    #headerType {}
+
+    .header_wrap {}
+
+    .header_inner {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+
+    .header_logo {
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .header_logo em {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .header_menu li {
+      display: inline;
+    }
+
+    .header_menu li a {
+      padding: 13px 25px;
+      margin: 0 5px;
+      transition: background-color 0.33s;
+    }
+
+    .header_menu li a:hover {
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+
+
+    .header_member a {
+      font-size: 16px;
+      padding: 10px 30px;
+      border: 1px solid black;
+      border-radius: 20px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <header id="headerType" class="header_wrap nexon">
+    <div class="header_inner">
+      <div class="header_logo">
+        <a href="#">web <em>class</em></a>
+      </div>
+      <nav class="header_menu">
+        <ul>
+          <li><a href="#">헤더 영역</a></li>
+          <li><a href="#">슬라이드 영역</a></li>
+          <li><a href="#">배너 영역</a></li>
+          <li><a href="#">컨텐츠 영역</a></li>
+          <li><a href="#">푸터 영역</a></li>
+        </ul>
+      </nav>
+      <div class="header_member">
+        <a href="#">로그인</a>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>
